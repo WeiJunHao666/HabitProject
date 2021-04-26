@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="imgs">
+        <item>@drawable/inmine</item>
+        <item>@drawable/a2</item>
+    </integer-array>
+    <string-array name="colors">
+        <item>#111111</item>
+        <item>#456789</item>
+    </string-array>
+</resources>
