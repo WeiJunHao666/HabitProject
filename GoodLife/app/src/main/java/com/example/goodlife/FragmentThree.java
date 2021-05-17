@@ -1,4 +1,4 @@
-package com.example.goodlife.wjh;
+package com.example.goodlife;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

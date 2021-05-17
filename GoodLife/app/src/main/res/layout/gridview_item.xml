@@ -5,25 +5,39 @@
     android:gravity="center"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
         <LinearLayout
             android:id="@+id/bg_time"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
             android:gravity="center"
-            android:background="@drawable/circular">
+            android:background="@drawable/background_circular">
 
             <ImageView
                 android:id="@+id/iv_timeImg"
-                android:src="@drawable/a2"
+                android:src="@drawable/breakfast42"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/tv_timeContent"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="敷面膜"/>
+        <com.example.goodlife.view.HabitView
+            android:id="@+id/anim_habit"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:elevation="10dp"
+            android:tag="0"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_timeContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="敷面膜"/>
 
 </LinearLayout>

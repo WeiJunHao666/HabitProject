@@ -1,8 +1,10 @@
-package com.example.goodlife.wjh.adapter;
+package com.example.goodlife.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Color;
+import android.graphics.drawable.GradientDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,9 +14,10 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.goodlife.R;
-import com.example.goodlife.wjh.bean.Habit;
-
+import com.example.goodlife.bean.Habit;
 import java.util.List;
+
+import static com.example.goodlife.R.drawable.background_circular;
 
 
 public class GridViewAdapter extends BaseAdapter {
@@ -23,8 +26,9 @@ public class GridViewAdapter extends BaseAdapter {
     private List<Habit> list;
     private int item_layout_id;
     private TypedArray imgs;
-    private TypedArray colors;
-    public GridViewAdapter(Context context, List<Habit> list, int item_layout_id, TypedArray imgs, TypedArray colors){
+    private String[] colors;
+
+    public GridViewAdapter(Context context, List<Habit> list, int item_layout_id, TypedArray imgs, String []colors){
         this.context = context;
         this.list = list;
         this.item_layout_id = item_layout_id;
@@ -59,14 +63,19 @@ public class GridViewAdapter extends BaseAdapter {
         LayoutInflater inflater = LayoutInflater.from(context);
         convertView =inflater.inflate(item_layout_id, null);
 
-        LinearLayout bg = convertView.findViewById(R.id.bg_time);
+        LinearLayout layout = convertView.findViewById(R.id.bg_time);
         ImageView img = convertView.findViewById(R.id.iv_timeImg);
         TextView txt = convertView.findViewById(R.id.tv_timeContent);
 
-        bg.setBackgroundColor(colors.getResourceId(list.get(position).getColor(), -1));
-        img.setImageResource(imgs.getResourceId(list.get(position).getImg(), -1));
-        txt.setText(list.get(position).getName());
+        //修改circular.xml文件中的背景颜色
+        GradientDrawable background = (GradientDrawable) context.getResources().getDrawable(background_circular);
+        String color = colors[list.get(position).getColor()];
+        background.setColor(Color.parseColor(color));
+        background.setStroke(6, Color.BLACK);
 
+        layout.setBackgroundResource(background_circular);
+        img.setImageResource(imgs.getResourceId(list.get(position).getIcon(), -1));
+        txt.setText(list.get(position).getName());
         return convertView;
     }
 }

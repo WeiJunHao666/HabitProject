@@ -31,5 +31,11 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     //wjh:底部导航栏
     implementation 'com.ashokvarma.android:bottom-navigation-bar:2.2.0'
+    //wjh:底部弹窗
+    implementation 'com.google.android.material:material:1.0.0'
+    //日历控件
+    implementation 'com.haibin:calendarview:3.6.8'
+    //侧滑功能
+    implementation 'com.daimajia.swipelayout:library:1.2.0'
 
 }

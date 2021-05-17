@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TimePicker
+        android:id="@+id/timePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:timePickerMode="clock"
+        style="@style/myTimePickerStyle"
+        />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_remind_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="返回"
+            android:layout_weight="1"
+            android:background="#ffeeeeee"/>
+
+        <Button
+            android:id="@+id/btn_remind_save"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="保存"
+            android:layout_weight="1"
+            android:background="#00000000"/>
+
+    </LinearLayout>
+
+</LinearLayout>

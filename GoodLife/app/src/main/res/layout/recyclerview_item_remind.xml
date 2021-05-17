@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.example.goodlife.view.ItemRemindView
+        android:layout_centerVertical="true"
+        android:id="@+id/remind_view"
+        android:layout_width="30dp"
+        android:layout_height="60dp"/>
+
+    <TextView
+        android:id="@+id/txt_remind_time"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/remind_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10:18"/>
+
+    <Switch
+        android:id="@+id/switch_button"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>

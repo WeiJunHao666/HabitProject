@@ -1,11 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <integer-array name="imgs">
-        <item>@drawable/inmine</item>
+        <item>@drawable/breakfast42</item>
         <item>@drawable/a2</item>
+        <item>@drawable/a3</item>
+        <item>@drawable/a4</item>
+        <item>@drawable/a5</item>
+        <item>@drawable/a6</item>
+        <item>@drawable/a3</item>
+        <item>@drawable/a4</item>
+        <item>@drawable/a5</item>
+        <item>@drawable/a6</item>
+        <item>@drawable/a3</item>
+        <item>@drawable/a4</item>
+        <item>@drawable/a5</item>
+        <item>@drawable/a6</item>
+        <item>@drawable/a4</item>
+        <item>@drawable/a5</item>
+        <item>@drawable/a6</item>
+        <item>@drawable/a3</item>
+        <item>@drawable/a4</item>
+        <item>@drawable/a5</item>
+        <item>@drawable/a6</item>
+        <item>@drawable/a3</item>
+        <item>@drawable/a4</item>
+        <item>@drawable/a5</item>
+        <item>@drawable/a6</item>
+        <item>@drawable/a3</item>
+        <item>@drawable/breakfast42</item>
+        <item>@drawable/breakfast42</item>
+        <item>@drawable/breakfast42</item>
+        <item>@drawable/breakfast42</item>
+        <item>@drawable/breakfast42</item>
+        <item>@drawable/a5</item>
     </integer-array>
     <string-array name="colors">
-        <item>#111111</item>
+        <item>#8dc63f</item>
         <item>#456789</item>
+        <item>#8231c2</item>
+        <item>#786a22</item>
+        <item>#821345</item>
+        <item>#567456</item>
+        <item>#172134</item>
+        <item>#256662</item>
+        <item>#911234</item>
+        <item>#555522</item>
+        <item>#334126</item>
+        <item>#889977</item>
+        <item>#8dc63f</item>
+        <item>#456789</item>
+        <item>#8231c2</item>
+        <item>#786a22</item>
+        <item>#821345</item>
+        <item>#567456</item>
+        <item>#172134</item>
+        <item>#256662</item>
+        <item>#911234</item>
+        <item>#555522</item>
+        <item>#334126</item>
+        <item>#889977</item>
+        <item>#8dc63f</item>
+        <item>#456789</item>
+        <item>#8231c2</item>
+        <item>#786a22</item>
+        <item>#821345</item>
+        <item>#567456</item>
+        <item>#172134</item>
+        <item>#256662</item>
+        <item>#911234</item>
+        <item>#555522</item>
+        <item>#334126</item>
+        <item>#889977</item>
+        <item>#8dc63f</item>
+        <item>#456789</item>
+        <item>#E0E0E0</item>
     </string-array>
 </resources>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <ImageView
+            android:id="@+id/img_return"
+            android:src="@drawable/out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/txt_daily_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/img_edit"
+            android:src="@drawable/edit"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <com.haibin.calendarview.CalendarLayout
+        android:id="@+id/calendarLayout"
+        android:layout_below="@id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:calendar_show_mode="both_month_week_view"
+        app:default_status="shrink"
+        app:calendar_content_view_id="@+id/content_daily">
+
+        <com.haibin.calendarview.CalendarView
+            android:id="@+id/calendarView"
+            android:background="#fff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:month_view="com.example.goodlife.calendar.mMonthView"
+            app:week_view="com.example.goodlife.calendar.mWeekView"
+            app:calendar_height="50dp"
+            app:week_bar_height="50dp"
+            app:current_month_text_color="#333333"
+            app:min_year="1900"
+            app:max_year="2099"
+            app:selected_text_color="#fff"
+            app:selected_theme_color="#108cd4"
+            app:scheme_text="假"
+            app:week_start_with="mon"
+            app:week_text_color="#111"
+            app:month_view_show_mode="mode_only_current" />
+
+        <LinearLayout
+            android:id="@+id/content_daily"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_daily_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_daily_content_daily"
+                android:text="05月16日: 3个日常动态"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </com.haibin.calendarview.CalendarLayout>
+
+</RelativeLayout>
+
+
+
+
+

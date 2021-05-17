@@ -1,17 +1,16 @@
 package com.example.goodlife;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.util.Log;
 import android.widget.LinearLayout;
 
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
-import com.example.goodlife.wjh.FragmentOne;
-import com.example.goodlife.wjh.FragmentThree;
-import com.example.goodlife.wjh.FragmentTwo;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationBar.OnTabSelectedListener{
 
@@ -58,9 +57,9 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
                 .setTabSelectedListener(this)
                 .setMode(BottomNavigationBar.MODE_FIXED)
                 .setBackgroundStyle(BottomNavigationBar.BACKGROUND_STYLE_DEFAULT)
-                .addItem(new BottomNavigationItem(R.drawable.inhome, "主页")
+                .addItem(new BottomNavigationItem(R.drawable.inhome, "今日")
                 .setInactiveIconResource(R.drawable.home))
-                .addItem(new BottomNavigationItem(R.drawable.inquan, "圈子")
+                .addItem(new BottomNavigationItem(R.drawable.inquan, "全部")
                 .setInactiveIconResource(R.drawable.quanzi))
                 .addItem(new BottomNavigationItem(R.drawable.inmine, "我的")
                 .setInactiveIconResource(R.drawable.mine))

@@ -1,10 +1,29 @@
-<resources>
+<?xml version="1.0" encoding="utf-8"?>
+<resources name="sss" id="myStyle" xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="BottomPopupWindowAnimation" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/bottom_popup_in</item>
+        <item name="android:windowExitAnimation">@anim/bottom_popup_out</item>
+    </style>
+    
+    <style name="horizontal_line_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@android:color/black</item>
+    </style>
+    
+    <style name="myTimePickerStyle" >
+        <item name="android:headerBackground">#456789</item>
+        <item name="android:numbersSelectorColor" tools:ignore="NewApi">#8dc63f</item>
+        <item name="android:numbersBackgroundColor" tools:ignore="NewApi">#8231c2</item>
+        <item name="android:numbersTextColor" tools:ignore="NewApi">#911234</item>
     </style>
 
 </resources>
