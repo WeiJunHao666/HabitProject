@@ -7,13 +7,16 @@
     <RelativeLayout
         android:id="@+id/rl_title_set"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="40dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp">
 
         <ImageView
             android:id="@+id/img_set_return"
-            android:src="@drawable/a3"
+            android:src="@drawable/out"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -21,291 +24,373 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:textSize="20sp"
+            android:textStyle="bold"
             android:text="新的习惯"/>
 
         <ImageView
             android:id="@+id/img_set_save"
-            android:src="@drawable/a7"
+            android:src="@drawable/mark"
             android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
     </RelativeLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="挑选颜色和图表"/>
-
-    <HorizontalScrollView
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scrollbars="none">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent">
-
-            <com.example.goodlife.kindview.MyGridView
-                android:id="@+id/gridView_color"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:numColumns="auto_fit"
-                android:verticalSpacing="10dp" />
-
-        </LinearLayout>
-
-    </HorizontalScrollView>
-
-    <HorizontalScrollView
-        android:layout_marginTop="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scrollbars="none">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent">
-
-            <com.example.goodlife.kindview.MyGridView
-                android:id="@+id/gridView_icon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:numColumns="auto_fit"
-                android:verticalSpacing="10dp" />
-
-        </LinearLayout>
-
-    </HorizontalScrollView>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="在一天的什么时候"/>
-    
-    <HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scrollbars="none">
-
-        <RadioGroup
-            android:id="@+id/radioGroup_time"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <RadioButton
-                android:id="@+id/radioBtn_any"
-                android:layout_width="60dp"
-                android:layout_height="30dp"
-                android:button="@null"
-                android:text="任意时间"
-                android:textColor="#ffffff"
-                android:textSize="12sp"
-                android:gravity="center"
-                android:background="@drawable/background_time_checked"
-                android:checked="true"/>
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:orientation="vertical">
 
-            <RadioButton
-                android:id="@+id/radioBtn_up"
-                android:layout_width="60dp"
-                android:layout_height="30dp"
-                android:button="@null"
-                android:text="起床之后"
-                android:textSize="12sp"
-                android:gravity="center"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/background_time_nocheck" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="20dp"
+                android:gravity="center">
 
-            <RadioButton
-                android:id="@+id/radioBtn_mor"
-                android:layout_width="60dp"
-                android:layout_height="30dp"
-                android:button="@null"
-                android:text="晨间习惯"
-                android:textSize="12sp"
-                android:gravity="center"
-                android:background="@drawable/background_time_nocheck"/>
+                <LinearLayout
+                    android:id="@+id/bg_setHabit"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:gravity="center"
+                    android:background="@drawable/background_circular">
 
-            <RadioButton
-                android:id="@+id/radioBtn_noon"
-                android:layout_width="60dp"
-                android:layout_height="30dp"
-                android:button="@null"
-                android:text="中午时分"
-                android:textSize="12sp"
-                android:gravity="center"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/background_time_nocheck"/>
+                    <ImageView
+                        android:id="@+id/img_setHabit"
+                        android:src="@drawable/breakfast42"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
 
-            <RadioButton
-                android:id="@+id/radioBtn_evening"
-                android:layout_width="60dp"
-                android:layout_height="30dp"
-                android:button="@null"
-                android:text="傍晚习惯"
-                android:textSize="12sp"
-                android:gravity="center"
-                android:background="@drawable/background_time_nocheck"/>
+                </LinearLayout>
 
-            <RadioButton
-                android:id="@+id/radioBtn_night"
-                android:layout_width="60dp"
-                android:layout_height="30dp"
-                android:button="@null"
-                android:text="晚间习惯"
-                android:textSize="12sp"
-                android:gravity="center"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/background_time_nocheck"/>
+                <EditText
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/edit_name"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:hint="给习惯命名"
+                    android:textSize="16sp"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:gravity="center"
+                    android:background="@drawable/background_add"/>
 
-            <RadioButton
-                android:id="@+id/radioBtn_bed"
-                android:layout_width="60dp"
-                android:layout_height="30dp"
-                android:button="@null"
-                android:text="睡前习惯"
-                android:textSize="12sp"
-                android:gravity="center"
-                android:background="@drawable/background_time_nocheck"/>
+            </LinearLayout>
 
-        </RadioGroup>
-        
-    </HorizontalScrollView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="挑选颜色和图表:"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="在一周的什么时候"/>
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
 
-    <HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scrollbars="none">
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
 
-        <LinearLayout
-            android:id="@+id/checkBox_week"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+                    <com.example.goodlife.wjh.kindview.MyGridView
+                        android:id="@+id/gridView_color"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numColumns="auto_fit"
+                        android:paddingLeft="-10dp"
+                        android:verticalSpacing="10dp" />
 
-            <CheckBox
-                android:id="@+id/checkBtn_Mon"
-                android:layout_width="60dp"
-                android:layout_height="30dp"
-                android:button="@null"
-                android:text="周一"
-                android:textColor="#ffffff"
-                android:textSize="12sp"
-                android:gravity="center"
-                android:background="@drawable/background_time_checked"
-                android:checked="true"/>
+                </LinearLayout>
 
-            <CheckBox
-                android:id="@+id/checkBtn_Tue"
-                android:layout_width="60dp"
-                android:layout_height="30dp"
-                android:button="@null"
-                android:text="周二"
-                android:textColor="#fff"
-                android:textSize="12sp"
-                android:gravity="center"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/background_time_checked"
-                android:checked="true"/>
+            </HorizontalScrollView>
 
-            <CheckBox
-                android:id="@+id/checkBtn_Wed"
-                android:layout_width="60dp"
-                android:layout_height="30dp"
-                android:button="@null"
-                android:text="周三"
-                android:textColor="#fff"
-                android:textSize="12sp"
-                android:gravity="center"
-                android:background="@drawable/background_time_checked"
-                android:checked="true"/>
+            <HorizontalScrollView
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
 
-            <CheckBox
-                android:id="@+id/checkBtn_Thu"
-                android:layout_width="60dp"
-                android:layout_height="30dp"
-                android:button="@null"
-                android:text="周四"
-                android:textColor="#fff"
-                android:textSize="12sp"
-                android:gravity="center"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/background_time_checked"
-                android:checked="true"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
 
-            <CheckBox
-                android:id="@+id/checkBtn_Fri"
-                android:layout_width="60dp"
-                android:layout_height="30dp"
-                android:button="@null"
-                android:text="周五"
-                android:textColor="#fff"
-                android:textSize="12sp"
-                android:gravity="center"
-                android:background="@drawable/background_time_checked"
-                android:checked="true"/>
+                    <com.example.goodlife.wjh.kindview.MyGridView
+                        android:id="@+id/gridView_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numColumns="auto_fit"
+                        android:paddingLeft="-10dp"
+                        android:verticalSpacing="10dp" />
 
-            <CheckBox
-                android:id="@+id/checkBtn_Sat"
-                android:layout_width="60dp"
-                android:layout_height="30dp"
-                android:button="@null"
-                android:text="周六"
-                android:textColor="#fff"
-                android:textSize="12sp"
-                android:gravity="center"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/background_time_checked"
-                android:checked="true"/>
+                </LinearLayout>
 
-            <CheckBox
-                android:id="@+id/checkBtn_Sun"
-                android:layout_width="60dp"
-                android:layout_height="30dp"
-                android:button="@null"
-                android:text="周日"
-                android:textColor="#fff"
-                android:textSize="12sp"
-                android:gravity="center"
-                android:background="@drawable/background_time_checked"
-                android:checked="true"/>
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"
+                android:text="在一天的什么时候:"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <RadioGroup
+                    android:id="@+id/radioGroup_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/radioBtn_any"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:button="@null"
+                        android:text="任意时间"
+                        android:textColor="#ffffff"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:background="@drawable/background_time_checked"
+                        android:checked="true"/>
+
+                    <RadioButton
+                        android:id="@+id/radioBtn_up"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:button="@null"
+                        android:text="起床之后"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/background_time_nocheck" />
+
+                    <RadioButton
+                        android:id="@+id/radioBtn_mor"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:button="@null"
+                        android:text="晨间习惯"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:background="@drawable/background_time_nocheck"/>
+
+                    <RadioButton
+                        android:id="@+id/radioBtn_noon"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:button="@null"
+                        android:text="中午时分"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/background_time_nocheck"/>
+
+                    <RadioButton
+                        android:id="@+id/radioBtn_evening"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:button="@null"
+                        android:text="傍晚习惯"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:background="@drawable/background_time_nocheck"/>
+
+                    <RadioButton
+                        android:id="@+id/radioBtn_night"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:button="@null"
+                        android:text="晚间习惯"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/background_time_nocheck"/>
+
+                    <RadioButton
+                        android:id="@+id/radioBtn_bed"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:button="@null"
+                        android:text="睡前习惯"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:background="@drawable/background_time_nocheck"/>
+
+                </RadioGroup>
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="在一周的什么时候:"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/checkBox_week"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/checkBtn_Mon"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:button="@null"
+                        android:text="周一"
+                        android:textColor="#ffffff"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:background="@drawable/background_time_checked"
+                        android:checked="true"/>
+
+                    <CheckBox
+                        android:id="@+id/checkBtn_Tue"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:button="@null"
+                        android:text="周二"
+                        android:textColor="#fff"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/background_time_checked"
+                        android:checked="true"/>
+
+                    <CheckBox
+                        android:id="@+id/checkBtn_Wed"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:button="@null"
+                        android:text="周三"
+                        android:textColor="#fff"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:background="@drawable/background_time_checked"
+                        android:checked="true"/>
+
+                    <CheckBox
+                        android:id="@+id/checkBtn_Thu"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:button="@null"
+                        android:text="周四"
+                        android:textColor="#fff"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/background_time_checked"
+                        android:checked="true"/>
+
+                    <CheckBox
+                        android:id="@+id/checkBtn_Fri"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:button="@null"
+                        android:text="周五"
+                        android:textColor="#fff"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:background="@drawable/background_time_checked"
+                        android:checked="true"/>
+
+                    <CheckBox
+                        android:id="@+id/checkBtn_Sat"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:button="@null"
+                        android:text="周六"
+                        android:textColor="#fff"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/background_time_checked"
+                        android:checked="true"/>
+
+                    <CheckBox
+                        android:id="@+id/checkBtn_Sun"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:button="@null"
+                        android:text="周日"
+                        android:textColor="#fff"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:background="@drawable/background_time_checked"
+                        android:checked="true"/>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="设置提醒的时间:"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+
+            <ImageView
+                android:id="@+id/img_addRemind"
+                android:src="@drawable/add2"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="写一句激励自己的话:"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/edit_words"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="text"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="50dp"
+                android:padding="10dp"
+                android:background="@drawable/background_add"
+                android:hint="对自己说,每天都要加油!"/>
 
         </LinearLayout>
 
-    </HorizontalScrollView>
+    </ScrollView>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="设置提醒的时间"/>
-
-    <ImageView
-        android:id="@+id/img_addRemind"
-        android:src="@drawable/add2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="写一句激励自己的话"/>
-    <EditText
-        android:id="@+id/edit_words"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:inputType="text"
-        android:background="@drawable/background_add"
-        android:hint="对自己说,每天都要加油!"/>
 
 </LinearLayout>

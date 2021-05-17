@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
@@ -11,7 +11,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:timePickerMode="clock"
-        style="@style/myTimePickerStyle"
+        android:headerBackground="#afb4db"
+        android:numbersSelectorColor="#afb4db"
+        android:numbersBackgroundColor="#E8E8E8"
+        android:numbersTextColor="#111111"
         />
 
     <LinearLayout
@@ -33,7 +36,8 @@
             android:layout_height="wrap_content"
             android:text="保存"
             android:layout_weight="1"
-            android:background="#00000000"/>
+            android:textColor="#111111"
+            android:background="#afb4db"/>
 
     </LinearLayout>
 

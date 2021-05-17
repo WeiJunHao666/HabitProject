@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="match_parent"
+<RelativeLayout
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <com.example.goodlife.view.ItemRemindView
+    <com.example.goodlife.wjh.view.ItemRemindView
         android:layout_centerVertical="true"
         android:id="@+id/remind_view"
         android:layout_width="30dp"
-        android:layout_height="60dp"/>
+        android:layout_height="70dp" />
 
     <TextView
         android:id="@+id/txt_remind_time"
@@ -24,5 +26,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
+    <View
+        android:id="@+id/view_bottom_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@android:color/black"
+        android:layout_marginLeft="10dp"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>

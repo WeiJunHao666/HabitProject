@@ -7,13 +7,16 @@
     <RelativeLayout
         android:id="@+id/rl_title_remind"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="40dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp">
 
         <ImageView
             android:id="@+id/img_remind_return"
-            android:src="@drawable/a3"
+            android:src="@drawable/out"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -21,12 +24,14 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:textSize="20sp"
+            android:textStyle="bold"
             android:text="习惯提醒"/>
 
         <ImageView
             android:id="@+id/img_remind_add"
-            android:src="@drawable/a7"
+            android:src="@drawable/increase"
             android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
@@ -39,18 +44,22 @@
         android:scrollbars="none">
 
         <RelativeLayout
+            android:id="@+id/layout_bottom_margin"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
 
-            <com.example.goodlife.view.LinedTextView
+            <com.example.goodlife.wjh.view.LinedTextView
                 android:id="@+id/txt_lined"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_remind"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="match_parent"
+                android:layout_marginBottom="60dp"/>
 
         </RelativeLayout>
 

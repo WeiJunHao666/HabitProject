@@ -6,29 +6,34 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <RelativeLayout
-        android:id="@+id/rl_title"
+        android:id="@+id/rl_title_detail"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="40dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp">
 
         <ImageView
-            android:id="@+id/img_return"
-            android:src="@drawable/a3"
+            android:id="@+id/img_detail_return"
+            android:src="@drawable/out"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"/>
 
         <TextView
-            android:id="@+id/txt_daily_month"
+            android:id="@+id/txt_detail_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:text="习惯"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textStyle="bold"/>
 
         <ImageView
-            android:id="@+id/img_daily"
-            android:src="@drawable/a7"
+            android:id="@+id/img_detail_edit"
+            android:src="@drawable/edit"
             android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
@@ -36,7 +41,7 @@
 
     <com.haibin.calendarview.CalendarLayout
         android:id="@+id/calendarLayout_detail"
-        android:layout_below="@id/rl_title"
+        android:layout_below="@id/rl_title_detail"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -48,8 +53,8 @@
             android:id="@+id/calendarView_detail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:month_view="com.example.goodlife.calendar.mMonthView"
-            app:week_view="com.example.goodlife.calendar.mWeekView"
+            app:month_view="com.example.goodlife.wjh.calendar.mMonthView"
+            app:week_view="com.example.goodlife.wjh.calendar.mWeekView"
             app:calendar_height="50dp"
             app:week_bar_height="50dp"
             app:current_month_text_color="#333333"
@@ -63,175 +68,230 @@
             app:week_background="#fff"
             app:month_view_show_mode="mode_only_current"/>
 
-            <LinearLayout
+            <androidx.core.widget.NestedScrollView
                 android:id="@+id/content"
-                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#ffffff">
+                android:scrollbars="none">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="打卡统计"/>
-
-                <RelativeLayout
+                <LinearLayout
+                    android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:background="#ffffff">
 
                     <LinearLayout
-                        android:id="@+id/one_box"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="100dp"
-                            android:background="@color/colorAccent"
-                            android:orientation="vertical"
-                            android:gravity="center"
-                            android:layout_weight="1">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="0天"/>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="已打卡"/>
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="100dp"
-                            android:layout_marginLeft="10dp"
-                            android:background="@color/colorAccent"
-                            android:orientation="vertical"
-                            android:gravity="center"
-                            android:layout_weight="1">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="0天"/>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="已打卡"/>
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                    <LinearLayout
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:layout_below="@id/one_box"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center_vertical">
 
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="100dp"
-                            android:background="@color/colorAccent"
-                            android:orientation="vertical"
-                            android:gravity="center"
-                            android:layout_weight="1">
+                        <ImageView
+                            android:src="@drawable/sun"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="0天"/>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="已打卡"/>
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="100dp"
-                            android:layout_marginLeft="10dp"
-                            android:background="@color/colorAccent"
-                            android:orientation="vertical"
-                            android:gravity="center"
-                            android:layout_weight="1">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="0天"/>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="已打卡"/>
-
-                        </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:text="打卡统计"/>
 
                     </LinearLayout>
 
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <RelativeLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="打卡日志"
-                        android:textSize="20sp"/>
+                        android:layout_margin="15dp">
 
-                    <TextView
-                        android:layout_alignParentRight="true"
-                        android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:id="@+id/one_box"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="90dp"
+                                android:background="@drawable/background_detail_frame"
+                                android:orientation="vertical"
+                                android:gravity="center"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0天"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="已打卡"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="90dp"
+                                android:layout_marginLeft="20dp"
+                                android:background="@drawable/background_detail_frame"
+                                android:orientation="vertical"
+                                android:gravity="center"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0天"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="已打卡"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginTop="20dp"
+                            android:layout_below="@id/one_box"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="90dp"
+                                android:background="@drawable/background_detail_frame"
+                                android:orientation="vertical"
+                                android:gravity="center"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0天"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="已打卡"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="90dp"
+                                android:layout_marginLeft="20dp"
+                                android:background="@drawable/background_detail_frame"
+                                android:orientation="vertical"
+                                android:gravity="center"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0天"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="已打卡"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/layout_remind"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="查看所有>"/>
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:padding="10dp"
+                        android:background="@drawable/background_detail_frame">
 
+                        <ImageView
+                            android:id="@+id/img_remind_detail"
+                            android:src="@drawable/clock"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"/>
 
-                </RelativeLayout>
+                        <TextView
+                            android:id="@+id/txt_remind_detail"
+                            android:layout_toRightOf="@id/img_remind_detail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="6个通知提醒"
+                            android:layout_centerVertical="true"/>
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recycler_detail"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:nestedScrollingEnabled="false"/>
+                        <ImageView
+                            android:src="@drawable/right"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"/>
 
-                <RelativeLayout
-                    android:id="@+id/layout_remind"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp">
+                    </RelativeLayout>
 
-                    <ImageView
-                        android:id="@+id/img_remind_detail"
-                        android:src="@drawable/a2"
-                        android:layout_width="wrap_content"
+                    <RelativeLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"/>
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp">
 
-                    <TextView
-                        android:id="@+id/txt_remind_detail"
-                        android:layout_toRightOf="@id/img_remind_detail"
-                        android:layout_width="wrap_content"
+                        <ImageView
+                            android:id="@+id/sun"
+                            android:src="@drawable/sun"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"/>
+
+                        <TextView
+                            android:layout_toRightOf="@id/sun"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="打卡日志"
+                            android:textStyle="bold"
+                            android:textSize="18sp"/>
+
+                        <TextView
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="查看所有>"
+                            android:layout_centerVertical="true"/>
+
+
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_detail"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="6个通知提醒"
-                        android:layout_centerVertical="true"/>
+                        android:nestedScrollingEnabled="false"
+                        android:paddingTop="10dp" />
 
-                    <ImageView
-                        android:src="@drawable/add2"
-                        android:layout_alignParentRight="true"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"/>
+                    <View
+                        android:layout_marginTop="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@android:color/black"/>
 
-                </RelativeLayout>
-        </LinearLayout>
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
 
     </com.haibin.calendarview.CalendarLayout>
 

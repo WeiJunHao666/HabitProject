@@ -13,6 +13,7 @@ import java.util.Calendar;
 import java.util.TimeZone;
 
 import static com.example.goodlife.R.drawable.background_circular;
+import static com.example.goodlife.R.drawable.cal;
 
 public class Utils {
 
@@ -72,8 +73,31 @@ public class Utils {
 
         TimeZone.setDefault(TimeZone.getTimeZone("GMT+8"));
         Calendar cal= Calendar.getInstance();
-        SimpleDateFormat dateFormat= new SimpleDateFormat("HH:mm");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm");
 
         return dateFormat.format(cal.getTime())+"";
+    }
+
+    /**
+     * 设置选中的背景颜色(方形)
+     */
+    public static void setBackgroundChecked(Context context, String color, View view){
+        GradientDrawable drawable = new GradientDrawable();
+        drawable.setShape(GradientDrawable.RECTANGLE);
+        drawable.setColor(Color.parseColor(color));
+        drawable.setStroke(dip2px(context, 2), Color.BLACK);
+        drawable.setCornerRadius(dip2px(context, 8));
+        drawable.setSize(60,40);
+        view.setBackground(drawable);
+    }
+    /**
+     *设置选中的背景颜色(圆形)
+     */
+    public static void setBackgroundCircle(Context context, String color, View view){
+        GradientDrawable drawable = new GradientDrawable();
+        drawable.setShape(GradientDrawable.OVAL);
+        drawable.setStroke(Utils.dip2px(context,2), Color.BLACK);
+        drawable.setColor(Color.parseColor(color));
+        view.setBackground(drawable);
     }
 }

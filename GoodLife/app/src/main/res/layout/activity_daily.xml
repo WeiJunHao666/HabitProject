@@ -53,8 +53,8 @@
             android:background="#fff"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:month_view="com.example.goodlife.calendar.mMonthView"
-            app:week_view="com.example.goodlife.calendar.mWeekView"
+            app:month_view="com.example.goodlife.wjh.calendar.mMonthView"
+            app:week_view="com.example.goodlife.wjh.calendar.mWeekView"
             app:calendar_height="50dp"
             app:week_bar_height="50dp"
             app:current_month_text_color="#333333"
@@ -67,30 +67,37 @@
             app:week_text_color="#111"
             app:month_view_show_mode="mode_only_current" />
 
-        <LinearLayout
+        <ScrollView
             android:id="@+id/content_daily"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#ffffff"
-            android:padding="10dp"
-            android:orientation="vertical">
+            android:scrollbars="none">
 
-            <TextView
-                android:id="@+id/txt_daily_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/background_daily_content_daily"
-                android:text="05月16日: 3个日常动态"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:padding="10dp"
-                android:layout_marginBottom="10dp"/>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerView"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_daily_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_daily_content_daily"
+                    android:text="05月16日: 3个日常动态"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:padding="10dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </ScrollView>
 
     </com.haibin.calendarview.CalendarLayout>
 

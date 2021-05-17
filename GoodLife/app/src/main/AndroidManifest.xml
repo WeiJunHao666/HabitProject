@@ -9,13 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ActivityHabitDetail"></activity>
-        <activity android:name=".ActivityRemind" />
-        <activity android:name=".ActivitySetHabit" />
-        <activity android:name=".ActivityAddHabit" />
-        <activity android:name=".ActivityDaily" />
-        <activity android:name=".getCardActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".wjh.regist.view.ActivityRegist"></activity>
+        <activity android:name=".wjh.login.view.ActivityLogin" />
+        <activity android:name=".wjh.ActivityHabitDetail" />
+        <activity android:name=".wjh.ActivityRemind" />
+        <activity android:name=".wjh.ActivitySetHabit" />
+        <activity android:name=".wjh.ActivityAddHabit" />
+        <activity android:name=".wjh.ActivityDaily" />
+        <activity android:name=".wjh.getCardActivity" />
+        <activity android:name=".wjh.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

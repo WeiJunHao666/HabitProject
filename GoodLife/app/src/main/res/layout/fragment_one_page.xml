@@ -28,7 +28,7 @@
 
         <ImageView
             android:id="@+id/img_daily"
-            android:src="@drawable/balloon"
+            android:src="@drawable/calendar"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_width="wrap_content"
