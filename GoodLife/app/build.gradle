@@ -39,5 +39,7 @@ dependencies {
     implementation 'com.daimajia.swipelayout:library:1.2.0'
     //okhttp网络请求框架
     implementation 'com.squareup.okhttp3:okhttp:4.2.2'
+    //圆形图片
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 
 }

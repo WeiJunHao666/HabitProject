@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:id="@+id/common_problem_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/common_problem_back"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:src="@drawable/back"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="常见问题"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/common_problem_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/common_problem_head"
+        android:text="-、习惯提醒问题"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"/>
+    <TextView
+        android:id="@+id/common_problem_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/common_problem_text1"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:paddingLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:textSize="20dp"
+        android:text="安卓系统原因，手机进入休眠之后，应用会接收不到系统的广播，所以闹钟功能实现起来，很不完美。目前小日常是将通知权限，交给系统自带的日历这个app,所以首先请确保小日常能够对日历进行读写操作的权限，是开启的状态，接着是日历的通知权限是开启的，才能够通知到你。"
+        />
+</RelativeLayout>
