@@ -24,13 +24,20 @@
 
         </LinearLayout>
 
-        <com.example.goodlife.wjh.view.HabitView
+        <com.example.goodlife.wjh.customview.HabitView
             android:id="@+id/anim_habit"
             android:layout_width="66dp"
             android:layout_height="66dp"
-            android:elevation="10dp"
             android:tag="0"
             android:visibility="gone"/>
+
+        <com.example.goodlife.wjh.customview.ClokedInView
+            android:id="@+id/clocked_in"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:tag="0"
+            android:visibility="gone"
+            />
 
     </RelativeLayout>
 

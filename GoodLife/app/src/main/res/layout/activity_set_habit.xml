@@ -13,7 +13,7 @@
 
         <ImageView
             android:id="@+id/img_set_return"
-            android:src="@drawable/out"
+            android:src="@drawable/out1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"/>
@@ -71,8 +71,8 @@
                 </LinearLayout>
 
                 <EditText
-                    android:layout_marginTop="20dp"
                     android:id="@+id/edit_name"
+                    android:layout_marginTop="20dp"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:paddingLeft="5dp"

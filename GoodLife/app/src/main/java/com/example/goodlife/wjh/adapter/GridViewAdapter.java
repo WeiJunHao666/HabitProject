@@ -14,7 +14,10 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.goodlife.R;
+import com.example.goodlife.Utils;
 import com.example.goodlife.wjh.bean.Habit;
+import com.example.goodlife.wjh.customview.ClokedInView;
+
 import java.util.List;
 
 import static com.example.goodlife.R.drawable.background_circular;
@@ -25,15 +28,11 @@ public class GridViewAdapter extends BaseAdapter {
     private Context context;
     private List<Habit> list;
     private int item_layout_id;
-    private TypedArray imgs;
-    private String[] colors;
 
-    public GridViewAdapter(Context context, List<Habit> list, int item_layout_id, TypedArray imgs, String []colors){
+    public GridViewAdapter(Context context, List<Habit> list, int item_layout_id){
         this.context = context;
         this.list = list;
         this.item_layout_id = item_layout_id;
-        this.imgs = imgs;
-        this.colors = colors;
     }
 
     @Override
@@ -57,7 +56,6 @@ public class GridViewAdapter extends BaseAdapter {
         return position;
     }
 
-    @SuppressLint("ResourceAsColor")
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = LayoutInflater.from(context);
@@ -66,15 +64,15 @@ public class GridViewAdapter extends BaseAdapter {
         LinearLayout layout = convertView.findViewById(R.id.bg_time);
         ImageView img = convertView.findViewById(R.id.iv_timeImg);
         TextView txt = convertView.findViewById(R.id.tv_timeContent);
-
+        ClokedInView view = convertView.findViewById(R.id.clocked_in);
         //修改circular.xml文件中的背景颜色
         GradientDrawable background = (GradientDrawable) context.getResources().getDrawable(background_circular);
-        String color = colors[list.get(position).getColor()];
+        String color = Utils.getColor(context, R.array.colors, list.get(position).getColor());
         background.setColor(Color.parseColor(color));
         background.setStroke(6, Color.BLACK);
-
         layout.setBackgroundResource(background_circular);
-        img.setImageResource(imgs.getResourceId(list.get(position).getIcon(), -1));
+        //
+        img.setImageResource(Utils.getImageId(context, R.array.imgs, list.get(position).getIcon()));
         txt.setText(list.get(position).getName());
         return convertView;
     }

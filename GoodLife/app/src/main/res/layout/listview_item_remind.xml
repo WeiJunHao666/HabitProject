@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.daimajia.swipe.SwipeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:drag_edge="right"
+    android:id="@+id/swipeRemind"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/trash"
+        android:layout_width="160dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:tag="Bottom">
+
+        <LinearLayout
+            android:id="@+id/swipe_delete"
+            android:layout_width="match_parent"
+            android:background="#00000000"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_red_dark"
+                android:text="删除"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/bg_remind"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <com.example.goodlife.wjh.customview.ItemRemindView
+            android:layout_centerVertical="true"
+            android:id="@+id/remind_view"
+            android:layout_width="30dp"
+            android:layout_height="70dp" />
+
+        <TextView
+            android:id="@+id/txt_remind_time"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/remind_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:18"/>
+
+        <Switch
+            android:id="@+id/switch_button"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:id="@+id/view_bottom_line"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@android:color/black"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+
+</com.daimajia.swipe.SwipeLayout>

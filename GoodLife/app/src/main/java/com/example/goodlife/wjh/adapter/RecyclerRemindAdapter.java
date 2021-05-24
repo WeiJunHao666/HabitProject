@@ -11,18 +11,18 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.goodlife.R;
-import com.example.goodlife.wjh.bean.Remind;
+import com.example.goodlife.wjh.bean.RemindTimes;
 
 import java.util.List;
 
 public class RecyclerRemindAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private Context context;
-    private List<Remind> dataSource;
+    private List<RemindTimes> dataSource;
     private View inflater;
     private int flag2;
 
-    public RecyclerRemindAdapter(Context context, List<Remind> dataSource, int flag2) {
+    public RecyclerRemindAdapter(Context context, List<RemindTimes> dataSource, int flag2) {
         this.context = context;
         this.dataSource = dataSource;
         this.flag2 = flag2;

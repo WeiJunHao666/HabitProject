@@ -17,7 +17,7 @@
         <ImageView
             android:id="@+id/note_page_more"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
             android:src="@drawable/more"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"/>
@@ -46,13 +46,15 @@
             android:layout_height="wrap_content"
             android:text="共0篇"/>
     </RelativeLayout>
-    <GridLayout
+    <GridView
         android:id="@+id/note_page_body"
         android:layout_below="@id/note_page_mid"
         android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:rowCount="4"
-        android:columnCount="2"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnWidth="150dp"
+        android:numColumns="auto_fit"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="20dp" />
 
 </RelativeLayout>

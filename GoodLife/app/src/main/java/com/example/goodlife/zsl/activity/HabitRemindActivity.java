@@ -17,6 +17,7 @@ public class HabitRemindActivity extends AppCompatActivity {
     private ImageView back;
     private Button submit;
     private Switch aSwitch;
+    private int temp=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,12 +30,19 @@ public class HabitRemindActivity extends AppCompatActivity {
             @SuppressLint("ResourceAsColor")
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
-                if(isChecked){
+                temp++;
+                if (temp%2==1){
                     submit.setBackgroundDrawable(getResources().getDrawable(R.drawable.rounded_corner_button));
                     submit.setTextColor(R.color.white);
                 }else{
-                    submit.setBackgroundDrawable(getResources().getDrawable(R.drawable.rounded_corner_button));
-                    submit.setTextColor(R.color.white);
+                    submit.setBackgroundDrawable(getResources().getDrawable(R.drawable.rounded_corner_button2));
+                    submit.setTextColor(R.color.black);
+
+                }
+                if(isChecked){
+
+                }else{
+
                 }
             }
         });

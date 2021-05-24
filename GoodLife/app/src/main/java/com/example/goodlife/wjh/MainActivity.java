@@ -10,6 +10,8 @@ import android.widget.LinearLayout;
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
 import com.example.goodlife.R;
+import com.example.goodlife.wjh.homepage.FragmentOne;
+import com.example.goodlife.wjh.twopage.FragmentTwo;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationBar.OnTabSelectedListener{
 
@@ -18,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
     private FragmentOne fragmentOne;
     private FragmentTwo fragmentTwo;
     private FragmentThree fragmentThree;
+    private FragmentFour fragmentFour;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +49,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
         fragmentOne = new FragmentOne();
         fragmentTwo = new FragmentTwo();
         fragmentThree = new FragmentThree();
+        fragmentFour = new FragmentFour();
     }
 
     /**
@@ -60,6 +64,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
                 .setInactiveIconResource(R.drawable.home))
                 .addItem(new BottomNavigationItem(R.drawable.inquan, "全部")
                 .setInactiveIconResource(R.drawable.quanzi))
+                .addItem(new BottomNavigationItem(R.drawable.inchat, "时钟")
+                        .setInactiveIconResource(R.drawable.chat))
                 .addItem(new BottomNavigationItem(R.drawable.inmine, "我的")
                 .setInactiveIconResource(R.drawable.mine))
                 .setFirstSelectedPosition(0)
@@ -83,6 +89,9 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
                 break;
             case 2:
                 transaction.replace(R.id.ll_content, fragmentThree);
+                break;
+            case 3:
+                transaction.replace(R.id.ll_content, fragmentFour);
                 break;
             default:
                 transaction.replace(R.id.ll_content, fragmentOne);

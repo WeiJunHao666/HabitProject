@@ -5,7 +5,7 @@
     android:layout_marginLeft="10dp"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <com.example.goodlife.wjh.view.ItemRemindView
+    <com.example.goodlife.wjh.customview.ItemRemindView
         android:layout_centerVertical="true"
         android:id="@+id/remind_view"
         android:layout_width="30dp"

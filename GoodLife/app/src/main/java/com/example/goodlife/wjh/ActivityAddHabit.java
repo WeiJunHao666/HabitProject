@@ -15,6 +15,7 @@ import com.example.goodlife.R;
 import com.example.goodlife.wjh.adapter.AddGridViewAdapter;
 import com.example.goodlife.wjh.bean.Habit;
 import com.example.goodlife.wjh.kindview.MyGridView;
+import com.example.goodlife.wjh.sethabit.ActivitySetHabit;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -56,6 +57,9 @@ public class ActivityAddHabit extends AppCompatActivity {
         img_return.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.putExtra("back", "back");
+                setResult(1, intent);
                 finish();
             }
         });
@@ -84,34 +88,43 @@ public class ActivityAddHabit extends AppCompatActivity {
         list2 = new ArrayList<>();
         list3 = new ArrayList<>();
         list4 = new ArrayList<>();
-        Habit a1 = new Habit("习惯a1", 0, 0);
-        Habit a2 = new Habit("习惯a2", 1, 1);
-        Habit a3 = new Habit("习惯a3", 2, 2);
-        Habit a4 = new Habit("习惯a4", 3, 3);
-        Habit a5 = new Habit("习惯a5", 4, 3);
-        Habit a6 = new Habit("习惯a6", 5, 3);
-        Habit b1 = new Habit("习惯b1", 0, 0);
-        Habit b2 = new Habit("习惯b2", 1, 1);
-        Habit b3 = new Habit("习惯b3", 2, 2);
-        Habit b4 = new Habit("习惯b4", 3, 3);
-        Habit b5 = new Habit("习惯b5", 4, 3);
-        Habit b6 = new Habit("习惯b6", 5, 3);
-        Habit c1 = new Habit("习惯c1", 0, 0);
-        Habit c2 = new Habit("习惯c2", 1, 1);
-        Habit c3 = new Habit("习惯c3", 2, 2);
-        Habit c4 = new Habit("习惯c4", 3, 3);
-        Habit c5 = new Habit("习惯c5", 4, 3);
-        Habit c6 = new Habit("习惯c6", 5, 3);
-        Habit d1 = new Habit("习惯d1", 0, 0);
-        Habit d2 = new Habit("习惯d2", 1, 1);
-        Habit d3 = new Habit("习惯d3", 2, 2);
-        Habit d4 = new Habit("习惯d4", 3, 3);
-        Habit d5 = new Habit("习惯d5", 4, 3);
-        Habit d6 = new Habit("习惯d6", 5, 3);
+        Habit a1 = setHabit("早饭", 0, 0);
+        Habit a2 = setHabit("喝酒", 1, 1);
+        Habit a3 = setHabit("喝饮料", 2, 2);
+        Habit a4 = setHabit("按时吃药", 3, 3);
+        Habit a5 = setHabit("喝啤酒", 4, 3);
+        Habit a6 = setHabit("吃水果", 5, 3);
+        Habit b1 = setHabit("早饭", 0, 0);
+        Habit b2 = setHabit("喝酒", 1, 1);
+        Habit b3 = setHabit("喝饮料", 2, 2);
+        Habit b4 = setHabit("按时吃药", 3, 3);
+        Habit b5 = setHabit("喝啤酒", 4, 3);
+        Habit b6 = setHabit("吃水果", 5, 3);
+        Habit c1 = setHabit("习惯c1", 0, 0);
+        Habit c2 = setHabit("习惯c2", 1, 1);
+        Habit c3 = setHabit("习惯c3", 2, 2);
+        Habit c4 = setHabit("习惯c4", 3, 3);
+        Habit c5 = setHabit("习惯c5", 4, 3);
+        Habit c6 = setHabit("习惯c6", 5, 3);
+        Habit d1 = setHabit("习惯d1", 0, 0);
+        Habit d2 = setHabit("习惯d2", 1, 1);
+        Habit d3 = setHabit("习惯d3", 2, 2);
+        Habit d4 = setHabit("习惯d4", 3, 3);
+        Habit d5 = setHabit("习惯d5", 4, 3);
+        Habit d6 = setHabit("习惯d6", 5, 3);
         listAdd(list1, a1, a2, a3, a4, a5, a6);
         listAdd(list2, b1, b2, b3, b4, b5, b6);
         listAdd(list3, c1, c2, c3, c4, c5, c6);
         listAdd(list4, d1, d2, d3, d4, d5, d6);
+    }
+
+    private Habit setHabit(String str, int icon, int color){
+        Habit habit = new Habit();
+        habit.setName(str);
+        habit.setIcon(icon);
+        habit.setColor(color);
+
+        return habit;
     }
 
     private void listAdd(List<Habit> list, Habit a1, Habit a2, Habit a3, Habit a4, Habit a5, Habit a6) {
@@ -126,5 +139,13 @@ public class ActivityAddHabit extends AppCompatActivity {
     private void setGridAdapter(List<Habit> list, GridView gridView) {
         AddGridViewAdapter adapter = new AddGridViewAdapter(this, list, R.layout.item_gridview_add, imgs, colors);
         gridView.setAdapter(adapter);
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent();
+        intent.putExtra("back", "back");
+        setResult(1, intent);
+        super.onBackPressed();
     }
 }

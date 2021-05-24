@@ -3,7 +3,7 @@
     android:layout_height="wrap_content"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <com.example.goodlife.wjh.view.ItemDailyView
+    <com.example.goodlife.wjh.customview.ItemDailyView
         android:id="@+id/positon_one"
         android:layout_width="30dp"
         android:layout_marginLeft="10dp"

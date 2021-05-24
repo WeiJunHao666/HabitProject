@@ -29,7 +29,7 @@ public class UserEditChangedListener implements TextWatcher {
         if(temp.length()==0){
             iv_login_user_cancle.setImageDrawable(null);
         }else{
-            iv_login_user_cancle.setImageResource(R.drawable.cancel);
+            iv_login_user_cancle.setImageResource(R.drawable.remove);
         }
     }
 

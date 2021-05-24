@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/top"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:id="@+id/img_getCard"
+                android:src="@drawable/card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"/>
+
+            <RadioGroup
+                android:id="@+id/top_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/top_radio_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:text="正计时"
+                    android:textSize="15sp"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/top_radio1_checked"
+
+                    android:padding="5dp"/>
+
+                <RadioButton
+                    android:id="@+id/top_radio_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:text="倒计时"
+                    android:textSize="15sp"
+                    android:textColor="#000000"
+                    android:background="@drawable/top_radio2"
+                    android:padding="5dp"/>
+
+                <RadioButton
+                    android:id="@+id/top_radio_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:text="番茄钟"
+                    android:textSize="15sp"
+                    android:textColor="#000000"
+                    android:background="@drawable/top_radio3"
+                    android:padding="5dp"/>
+
+            </RadioGroup>
+
+            <ImageView
+                android:id="@+id/img_daily"
+                android:src="@drawable/calendar"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <com.example.goodlife.wjh.kindview.WaveView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints"
+            android:id="@+id/wave_view">
+        </com.example.goodlife.wjh.kindview.WaveView>
+
+        <Chronometer
+            android:id="@+id/clock_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="30sp"
+            android:textStyle="bold"/>
+
+        <TimePicker
+            android:id="@+id/time_picker_view"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:timePickerMode="spinner"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+
+        <Button
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/clock_start"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:tag="0"
+            android:textColor="#ffffff"
+            android:background="@drawable/background_btn_start"
+            android:text="开始"/>
+
+        <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_centerHorizontal="true">
+
+            <Button
+                android:id="@+id/clock_end"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginRight="80dp"
+                android:text="结束"
+                android:textColor="#FF1493"
+                android:background="@drawable/background_btn_end"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/clock_continue"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:text="继续"
+                android:textColor="#000000"
+                android:background="@drawable/background_btn_continue"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

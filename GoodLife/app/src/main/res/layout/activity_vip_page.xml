@@ -19,7 +19,7 @@
             android:text="高级用户"
             android:textColor="@color/black"
             android:textStyle="bold"
-            android:textSize="30dp"
+            android:textSize="20dp"
             android:layout_centerInParent="true"/>
     </RelativeLayout>
     <RelativeLayout
@@ -40,7 +40,7 @@
             android:text="欢迎加入小习惯会员大家庭"
             android:layout_below="@id/vip_img"
             android:layout_centerHorizontal="true"
-            android:textSize="20dp"
+            android:textSize="15dp"
             android:textStyle="bold"
             android:textColor="@color/black"
             android:layout_marginTop="20dp"/>
@@ -58,7 +58,7 @@
             android:layout_height="wrap_content"
             android:text="会员专享权益："
             android:textColor="@color/yellow"
-            android:textSize="20dp"
+            android:textSize="15dp"
             android:layout_marginLeft="20dp"/>
         <LinearLayout
         android:layout_width="match_parent"
@@ -75,11 +75,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/backup"
-                android:paddingLeft="5dp"/>
+                />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="习惯备份"
+                android:textSize="13dp"
                 android:textColor="@color/black"/>
         </LinearLayout>
         <LinearLayout
@@ -92,11 +93,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/newhabit"
-                android:paddingLeft="5dp"/>
+                />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="无限习惯"
+                android:textSize="13dp"
                 android:textColor="@color/black"/>
         </LinearLayout>
         <LinearLayout
@@ -109,11 +111,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/punch"
-                android:paddingLeft="5dp"/>
+                />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="桌面打卡"
+                android:textSize="13dp"
                 android:textColor="@color/black"/>
         </LinearLayout>
     </LinearLayout>
@@ -132,11 +135,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/remind"
-                    android:paddingLeft="5dp"/>
+                    />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="无限提醒"
+                    android:textSize="13dp"
                     android:textColor="@color/black"/>
             </LinearLayout>
             <LinearLayout
@@ -148,12 +152,14 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/out"
-                    android:paddingLeft="10dp"/>
+                    android:src="@drawable/out1"
+                    android:paddingLeft="5dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="去除广告"
+                    android:paddingTop="15dp"
+                    android:textSize="13dp"
                     android:textColor="@color/black"/>
             </LinearLayout>
             <LinearLayout
@@ -166,11 +172,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/follow"
-                    android:paddingLeft="5dp"/>
+                    />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="后续功能"
+                    android:textSize="13dp"
                     android:textColor="@color/black"/>
             </LinearLayout>
         </LinearLayout>

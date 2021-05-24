@@ -49,7 +49,7 @@ public class ColorGridViewAdapter extends BaseAdapter {
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        convertView = inflater.inflate(R.layout.item_gridview_color, null);
+        convertView = inflater.inflate(item_layout_id, null);
 
         final LinearLayout layout = convertView.findViewById(R.id.bg_color);
 

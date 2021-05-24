@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout android:layout_height="150dp"
+    android:id="@+id/note_page_item_background"
     android:layout_width="180dp"
     android:orientation="vertical"
     android:background="@drawable/note_item_background"

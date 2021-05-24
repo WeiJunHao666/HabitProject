@@ -17,16 +17,18 @@
             android:layout_height="wrap_content"
             android:text="习惯提醒"
             android:layout_centerInParent="true"
-            android:textSize="30dp"
+            android:textSize="20dp"
             android:textStyle="bold"
             android:textColor="@color/black"/>
         <Button
             android:id="@+id/habit_remind_submit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
             android:layout_alignParentRight="true"
             android:text="确定"
-            android:textSize="25dp"
+            android:textSize="15dp"
             android:background="#ffffff"/>
     </RelativeLayout>
     <RelativeLayout

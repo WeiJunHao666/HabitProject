@@ -13,7 +13,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.goodlife.wjh.ActivitySetHabit;
+import com.example.goodlife.wjh.sethabit.ActivitySetHabit;
 import com.example.goodlife.R;
 import com.example.goodlife.wjh.bean.Habit;
 

@@ -48,7 +48,7 @@ public class IconGridViewAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        convertView = inflater.inflate(R.layout.item_gridview_icon, null);
+        convertView = inflater.inflate(item_layout_id, null);
 
         LinearLayout layout = convertView.findViewById(R.id.bg_set_icon);
         ImageView img = convertView.findViewById(R.id.img_set_icon);

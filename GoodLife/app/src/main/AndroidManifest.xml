@@ -2,13 +2,19 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.goodlife">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
+
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+
         <activity android:name=".zsl.activity.CutDownPageActivity"></activity>
         <activity android:name=".zsl.activity.AcclaimPageActivity" />
         <activity android:name=".zsl.activity.EssayPageActivity" />
@@ -16,13 +22,18 @@
         <activity android:name=".zsl.activity.BackUpPageActivity" />
         <activity android:name=".zsl.activity.DynamicPageActivity" />
         <activity android:name=".zsl.activity.CardBagPageActivity" />
-        <activity android:name=".wjh.regist.view.ActivityRegist" />
-        <activity android:name=".wjh.login.view.ActivityLogin" />
-        <activity android:name=".wjh.ActivityHabitDetail" />
+        <activity android:name=".wjh.regist.ActivityRegist" />
+        <activity android:name=".wjh.login.ActivityLogin" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".wjh.detail.ActivityHabitDetail" />
         <activity android:name=".wjh.ActivityRemind" />
-        <activity android:name=".wjh.ActivitySetHabit" />
+        <activity android:name=".wjh.sethabit.ActivitySetHabit" />
         <activity android:name=".wjh.ActivityAddHabit" />
-        <activity android:name=".wjh.ActivityDaily" />
+        <activity android:name=".wjh.daily.ActivityDaily" />
         <activity android:name=".zsl.activity.NoteMorePageActivity" />
         <activity android:name=".zsl.activity.HabitNoteAddPageActivity" />
         <activity android:name=".zsl.activity.HabitNoteActivity" />
@@ -36,11 +47,6 @@
         <activity android:name=".zsl.activity.SetPageActivity" />
         <activity android:name=".wjh.getCardActivity" />
         <activity android:name=".wjh.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
